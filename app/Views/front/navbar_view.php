@@ -5,32 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barra de Navegación</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        .navbar-custom {
-            background-color: #6c757d; /* Color de fondo para la barra de navegación */
-        }
-        .navbar-brand img {
-            width: 75px; /* Ancho de la imagen del logo */
-            height: auto; /* Altura automática para mantener la proporción */
-        }
-        .navbar-brand, .navbar-nav .nav-link {
-            color: #ffffff; /* Color del texto para el logo y las pestañas */
-        }
-        .navbar-brand:hover, .navbar-nav .nav-link:hover {
-            color: #cccccc; /* Color del texto al pasar el cursor sobre las pestañas */
-        }
-        .form-control {
-            width: 150px; /* Ancho del campo de búsqueda */
-        }
-        .btn-search {
-            color: #ffffff; /* Color de texto blanco para el botón de búsqueda */
-            border-color: #ffffff; /* Color del borde del botón de búsqueda */
-        }
-        .btn-search:hover {
-            color: #cccccc; /* Color de texto al pasar el cursor sobre el botón de búsqueda */
-            border-color: #cccccc; /* Color del borde al pasar el cursor sobre el botón de búsqueda */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
@@ -71,3 +46,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+

@@ -4,32 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objetivos y Comercialización</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-        .content {
-            background-color: #ffffff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .objetivos {
-            font-size: 1.2em;
-            line-height: 1.6;
-            text-align: justify;
-            background-color: #e9ecef; /* Color de fondo del párrafo */
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px; /* Margen inferior */
-        }
-        .objetivos h2 {
-            margin-bottom: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <div class="content">

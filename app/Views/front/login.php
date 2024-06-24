@@ -5,18 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
-        .card {
-            max-width: 400px;
-            margin: auto;
-            margin-top: 20px; /* Margen superior */
-            margin-bottom: 20px; /* Margen inferior */
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="card">
@@ -31,8 +20,9 @@
                     <label for="password" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-between">
+                    <button type="submit" class="btn btn-primary me-md-2">Iniciar Sesión</button>
+                    <button type="button" class="btn btn-secondary">Cancelar</button>
                 </div>
             </form>
         </div>
