@@ -1,34 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-</head>
-<body>
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title text-center mb-4">Iniciar Sesión</h5>
-            <form>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-between">
-                    <button type="submit" class="btn btn-primary me-md-2">Iniciar Sesión</button>
-                    <button type="button" class="btn btn-secondary">Cancelar</button>
-                </div>
-            </form>
-        </div>
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+  <div class="card" style="width: 50%;">
+    <div class="card-header text-center">
+      <h2>Iniciar Sesión</h2>
     </div>
+    
+    <!-- Mensaje de error -->
+    <?php if (session()->getFlashdata('msg')): ?>
+      <div class="alert alert-warning">
+        <?= session()->getFlashdata('msg') ?>
+      </div>
+    <?php endif; ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-</body>
+    <!-- Inicio del formulario de login -->
+    <form method="post" action="<?= base_url('/enviarlogin') ?>">
+      <div class="card-body">
+        <div class="mb-2">
+          <label for="exampleFormControlInput1" class="form-label">Correo</label>
+          <input name="email" type="text" class="form-control" placeholder="Correo">
+        </div>
+        <div class="mb-2">
+          <label for="exampleFormControlInput2" class="form-label">Contraseña</label>
+          <input name="pass" type="password" class="form-control" placeholder="Contraseña">
+        </div>
+        <input type="submit" value="Ingresar" class="btn btn-success">
+        <a href="<?= base_url('login') ?>" class="btn btn-danger">Cancelar</a>
+        <br><span>¿Aún no se registró? <a href="<?= base_url('registro') ?>">Registrarse aquí</a></span>
+      </div>
+    </form>
+  </div>
+</div>
+
 </html>

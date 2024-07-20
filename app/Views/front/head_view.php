@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smartloop</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title><?php echo $titulo; ?></title>
+    
+    <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/styles.css'); ?>" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Bienvenidos a Smartloop</h1>
     </header>
+    
     <!-- El resto del contenido de tu página -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="<?php echo base_url('assets/js/bootstrap.bundle.min.js'); ?>"></script>
 </body>
 </html>

@@ -20,7 +20,7 @@
 # APP
 #--------------------------------------------------------------------
 
- app.baseURL = 'http://localhost/primer_proyecto'
+ app.baseURL = 'http://localhost/ProT3_34145027'
 # If you have trouble with `.`, you could also use `_`.
 # app_baseURL = ''
 # app.forceGlobalSecureRequests = false

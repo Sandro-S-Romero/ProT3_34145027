@@ -7,8 +7,7 @@
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Mi primer página!</h1>
-
+  
   <!-- Carrusel -->
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">

@@ -12,6 +12,7 @@ use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\PageCache;
 use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
+use App\Filters\Auth; // Añadido para asegurar que se carga el filtro personalizado de auth
 
 class Filters extends BaseFilters
 {
@@ -34,7 +35,7 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
-    ];
+        'auth'          => \App\Filters\Auth::class ];
 
     /**
      * List of special required filters.
