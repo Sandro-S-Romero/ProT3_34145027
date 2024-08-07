@@ -10,8 +10,8 @@ class login_controller extends BaseController
     {
         helper(['form', 'url']);
 
-        $dato['titulo'] = 'login';
-        echo view('front/head_view', $dato);
+        $data['titulo'] = 'login';
+        echo view('front/head_view', $data);
         echo view('front/navbar_view');
         echo view('Back/usuario/login');
         echo view('front/footer_view');

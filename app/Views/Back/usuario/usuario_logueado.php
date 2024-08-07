@@ -6,14 +6,21 @@
 					<?= session()->getFlashdata('msg') ?>
 				</div>
 			<?php endif; ?>
+
 			<br><br>
+
+			<!-- Muestra el nombre del usuario -->
+			<h2> Bienvenido <?= $nombre ?> <?= $apellido ?></h2>
+
 			<?php if (session()->perfil_id == 1) : ?>
 				<!-- Contenido para el perfil 1 -->
 				<p>Contenido específico para el perfil 1.</p>
 			<?php elseif (session()->perfil_id == 2) : ?>
 				<!-- Contenido para el perfil 2 -->
-				<p>Contenido específico para el perfil 2.</p>
+				<p> Actualmente esta página esta en construcción.
+				Aquí verás todos nuestros productos</p>
 			<?php endif; ?>
 		</div>
 	</div>
 </div>
+

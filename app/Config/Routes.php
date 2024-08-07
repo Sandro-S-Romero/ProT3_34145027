@@ -1,3 +1,4 @@
+
 <?php
 
 use CodeIgniter\Router\RouteCollection;
@@ -15,7 +16,7 @@ $routes->get('registro', 'Home::registro');
 $routes->get('login', 'Home::login');
 
 // Rutas de registro de usuarios
-$routes->get('registro', 'usuario_Controller::create');
+
 $routes->post('enviar-form', 'usuario_Controller::formValidation');
 
 
@@ -24,3 +25,5 @@ $routes->get('login', 'login_controller::index');
 $routes->post('enviarlogin', 'login_controller::auth');
 $routes->get('panel', 'panel_Controller::index', ['filter' => 'auth']);
 $routes->get('logout', 'login_controller::logout');
+
+$routes->get('cuenta', 'CuentaController::index');

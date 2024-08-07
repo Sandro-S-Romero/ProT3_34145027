@@ -1,7 +1,8 @@
 <?php
 $session = session();
 $nombre = $session->get('nombre');
-$perfil = $session->get('perfil_id');
+$apellido = $session->get('apellido');
+$logged_in = $session->get('logged_in');
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
@@ -16,7 +17,6 @@ $perfil = $session->get('perfil_id');
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('quienes_somos'); ?>">Quiénes Somos</a>
@@ -27,15 +27,28 @@ $perfil = $session->get('perfil_id');
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('registro'); ?>">Registrarse</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('login'); ?>">Acceder</a>
-                </li>
+                
             </ul>
-            <form class="d-flex">
+
+            <form class="d-flex me-auto">
                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                 <button class="btn btn-outline-light btn-search" type="submit">Buscar</button>
             </form>
-            
+
+            <ul class="navbar-nav ms-auto">
+                <?php if ($logged_in) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('cuenta') ?>"> <?= esc($nombre) ?> <?= esc($apellido) ?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('logout') ?>">Cerrar sesión</a>
+                    </li>
+                <?php else : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('login') ?>">Iniciar sesión</a>
+                    </li>
+                <?php endif; ?>
+            </ul>
         </div>
     </div>
 </nav>
